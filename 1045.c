@@ -1,28 +1,27 @@
-#include<Stdio.h>
+#include<stdio.h>
 int main()
 {
     double A,B,C;
     scanf("%lf %lf %lf",&A,&B,&C);
-
-    A>0,B>0,C>0;
     
-
-    if(A>B&&A>C){
+    if(A>=(B+C)||B>=(A+C)||C>+(A+B)){
         printf("NAO FORMA TRIANGULO\n",A,B,C);
-     if(A*A==B*B+C*C){
+    }
+     else if(A*A==(B*B+C*C)||B*B==(A*A+C*C)||C*C==(A*A+B*B)){
         printf("TRIANGULO RETANGULO\n",A,B,C);
      }
-    else if(A*A>B*B+C*C){
+    else if(A*A>=(B*B+C*C)||B*B>=(A*A+C*C)||C*C>=(A*A+B*B)){
         printf("TRIANGULO OBTUSANGULO\n",A,B,C);
     }
-    else if(A*A<B*B+C*C){
+    else if(A*A<=(B*B+C*C)||B*B<=(A*A+C*C)||C*C<=(A*A+B*B)){
         printf("TRIANGULO ACUTANGULO\n",A,B,C);
     }
-    }
-    else if(A=B=C)
-        printf("TRIANGULO EQUILATERO\n",A,B,C);
-    else{
-        printf("TRIANGULO ISOSCELES\n",A,B,C);
+
+    if((A==B&&A!=C)||(A==C&&A!=B)||(B==C&&B!=A)){
+        printf("TRIANGULO ISOSCELES\n", A, B, C);
+     }
+    else if(A==B &&A==C){
+        printf("TRIANGULO EQUILATERO\n", A, B, C);
     }
 
     return 0;
