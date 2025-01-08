@@ -1,15 +1,15 @@
 #include <stdio.h>
 int main()
 {
-    double N;
+    float N;
     double num1, num2, num3, num4, num5, num6, num7, rem1, rem2, rem3, rem4,
      rem5, rem6, rem7,num8,num9,num10,num11,num12;
-    scanf("%lf", &N);
+    scanf("%f", &N);
 
-    num1 = N / 100.00;
-    rem1 = N % 100.00;
+    num1 = N / 100;
+    rem1 = N % 100;
     num2 = rem1 / 50;
-    rem2 = rem1 % 50.00;
+    rem2 = rem1 % 50;
     num3 = rem2 / 20;
     rem3 = rem2 % 20;
     num4 = rem3 / 10;
@@ -18,13 +18,13 @@ int main()
     rem5 = rem4 % 5;
     num6 = rem5 / 2;
     rem6 = rem5 % 2;
-    num7 = rem6 / 1.00;
+    num7 = rem6 / 1;
     rem7 = rem6 % 1;
-    num8 = rem7/0.50;
-    num9 = num8%0.25;
-    num10 =num9/0.10;
-    num11 =num10/0.05;
-    num12 = num11/0.01;
+    num8 = rem7/50;
+    num9 = num7%25;
+    num10 =num9/10;
+    num11 =num10/5;
+    num12 = num11/1;
 
     printf("%d\n", N);
     printf("%d nota(s) de R$ 100,00\n", num1);
